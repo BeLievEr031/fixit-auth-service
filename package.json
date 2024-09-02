@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky install",
     "formate:check": "npx prettier . --check",
     "formate:fix": "npx prettier . --write",
     "lint:check": "npx eslint .",
@@ -15,11 +15,9 @@
   "license": "ISC",
   "description": "",
   "lint-staged": {
-    "*.ts": [
-      "npm run lint:check",
+    "*.{js,ts,json,css,md}": [
       "npm run lint:fix",
-      "npm run formate:fix",
-      "npm run dev"
+      "npm run formate:fix"
     ]
   },
   "devDependencies": {
