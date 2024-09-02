@@ -1,0 +1,38 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "formate:check": "npx prettier . --check",
+    "formate:fix": "npx prettier . --write",
+    "lint:check": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "dev": "node ./src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "lint-staged": [
+    "npm run lint:check",
+    "npm run lint:fix",
+    "npm run formate:fix",
+    "npm run dev"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.5.2",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
