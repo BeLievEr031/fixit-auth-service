@@ -15,7 +15,7 @@
   "license": "ISC",
   "description": "",
   "lint-staged": {
-    "*.{js,ts,json,css,md}": [
+    "*.{ts}": [
       "npm run lint:fix",
       "npm run formate:fix"
     ]
