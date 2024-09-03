@@ -1,4 +1,3 @@
-const x = 45;
-console.log(x);
+import config from './config/config';
 
-console.log(x);
+console.log(config.PORT);

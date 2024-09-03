@@ -8,14 +8,15 @@
     "formate:fix": "npx prettier . --write",
     "lint:check": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "dev": "node ./src/app.ts"
+    "dev": "cross-env NODE_ENV=development nodemon ./src/app.ts",
+    "start": "cross-env NODE_ENV=production nodemon ./src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "lint-staged": {
-    "*.{ts}": [
+    "*.ts": [
       "npm run lint:fix",
       "npm run formate:fix"
     ]
@@ -23,16 +24,20 @@
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^22.5.2",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.4",
     "prettier": "3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0",
     "ts-node": "^10.9.2"
   }
 }
