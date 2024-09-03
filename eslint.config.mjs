@@ -25,7 +25,9 @@ export default tseslint.config(
         ignores: [
             "jest.config.js",
             "**/src/*.spec.ts",
-            "*.spec.ts"
+            "*.spec.ts",
+            ".gitignore",
+            "*.json",
         ]
     }
 );
