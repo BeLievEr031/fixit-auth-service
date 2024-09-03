@@ -5,6 +5,9 @@ coverage/
 node_modules/
 
 *.spec.ts
+eslint.config.mjs
+*.json
+.prettierrc
 
 # Ignore specific config files or lock files:
 package-lock.json
